@@ -1,0 +1,130 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="p.css"> 
+</head>
+<body>
+<h1>Create & Display</h1>
+<div id="div2">
+<p>
+</br>#include <stdio.h>
+</br>#include <stdlib.h>
+
+</br>/* Structure of a node */
+</br>struct node </br>{
+    <br/>int data;          // Data 
+  <br/>  struct node *next; // Address 
+<br/>}*head;
+
+
+<br/>/* 
+ * Functions to create and display list
+ */
+<br/>void createList(int n);
+<br/>void traverseList();
+
+
+<br/>int main()
+<br/>{
+    <br/>int n;
+
+    <br/>printf("Enter the total number of nodes: ");
+    <br/>scanf("%d", &n);
+
+    <br/>createList(n);
+
+    <br/>printf("\nData in the list \n");
+    <br/>traverseList();
+
+    <br/>return 0;
+<br/>}
+
+<br/>/*
+ * Create a list of n nodes
+ */
+<br/>void createList(int n)
+<br/>{
+    <br/>struct node *newNode, *temp;
+    <br/>int data, i;
+
+    <br/>head = (struct node *)malloc(sizeof(struct node));
+
+    <br/>/*
+     * If unable to allocate memory for head node
+     */
+    <br/>if(head == NULL)
+    <br/>{
+        <br/>printf("Unable to allocate memory.");
+    <br/>}
+    <br/>else
+    <br/>{
+        <br/>/*
+         <br/>* Input data of node from the user
+         <br/>*/
+        <br/>printf("Enter the data of node 1: ");
+        <br/>scanf("%d", &data);
+
+        <br/>head->data = data; // Link the data field with data
+        <br/>head->next = NULL; // Link the address field to NULL
+
+        <br/>temp = head;
+
+        <br/>/*
+         * Create n nodes and adds to linked list
+         */
+        <br/>for(i=2; i<=n; i++)
+        <br/>{
+            <br/>newNode = (struct node *)malloc(sizeof(struct node));
+
+            <br/>/* If memory is not allocated for newNode */
+            <br/>if(newNode == NULL)
+            <br/>{
+                <br/>printf("Unable to allocate memory.");
+                <br/>break;
+            <br/>}
+            <br/>else
+            <br/>{
+                <br/>printf("Enter the data of node %d: ", i);
+                <br/>scanf("%d", &data);
+
+                <br/>newNode->data = data; // Link the data field of newNode with data
+                <br/>newNode->next = NULL; // Link the address field of newNode with NULL
+
+                <br/>temp->next = newNode; // Link previous node i.e. temp to the newNode
+                <br/>temp = temp->next; 
+            <br/>}
+        <br/>}
+    <br/>}
+<br/>}
+
+<br/>/*
+ * Display entire list
+ */
+<br/>void traverseList()
+<br/>{
+    <br/>struct node *temp;
+
+    <br/>/*
+     * If the list is empty i.e. head = NULL
+     */
+    <br/>if(head == NULL)
+    <br/>{
+        <br/>printf("List is empty.");
+    <br/>}
+    <br/>else
+    <br/>{
+        <br/>temp = head;
+        <br/>while(temp != NULL)
+        <br/>{
+            <br/>printf("Data = %d\n", temp->data); // Print data of current node
+            <br/>temp = temp->next;                 // Move to next node
+        <br/>}
+    <br/>}
+<br/>}
+</p>
+</div>
+<div id="div3">
+<h1> Output:</h1></br>
+<img src="at7.png"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+#div1
+{
+	margin-left:190px;
+	margin-top:180px;
+	float:left;
+	
+}
+p
+{
+	font-size:20px;
+	float:left;
+	margin-left:-10px;
+	
+}
+h2
+{
+	background-image:url('homeimage3.jpg');
+	
+	font-size:50px;
+	text-align:center;
+}
+#div2
+{
+	float:right;
+	background-color:F2F2CB;
+	margin-right:180px;
+	margin-top:50px;
+}
+form
+{
+	height:640px;
+	width:650px;
+	margin:10px;
+}
+
+input
+{
+	height:32px;
+	margin-top:20px;
+	margin-left:10px;
+	padding:10px;
+}
+#sub{
+	height:40px;
+	width:600px;
+	background-color:A61111;
+	border:1px solid;
+	border-radiaus:10px;
+	margin:20px;
+}
+#sub1{
+	height:40px;
+	width:60px;
+	background-color:3F1684;
+		border:1px solid;
+	border-radiaus:10px;
+}

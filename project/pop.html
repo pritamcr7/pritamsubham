@@ -1,0 +1,152 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="p.css"> 
+</head>
+<body>
+<h1> Pop an element from Stack</h1>
+<div id="div2">
+<p>
+<br/>#include<stdio.h>
+<br/>#include<stdio.h>
+<br/>#include<stdlib.h>
+<br/>#define MAXSIZE 5
+<br/>struct stack
+<br/>{
+     <br/> int stk[MAXSIZE];
+      <br/>int top;
+<br/>};
+<br/>typedef struct stack ST;
+<br/>ST s;
+/*Function to add an element to stack */
+<br/>void push ()
+<br/>{
+     <br/> int num;
+      <br/>if (s.top == (MAXSIZE - 1))
+      <br/>{
+           <br/> printf ("Stack is Full\n");
+            <br/>return;
+      <br/>}
+      <br/>else
+      <br/>{
+           <br/> printf ("\nEnter element to be pushed : ");
+            <br/>scanf ("%d", &num);
+            <br/>s.top = s.top + 1;
+            <br/>s.stk[s.top] = num;
+      <br/>}
+      <br/>return;
+<br/>}
+<br/>/*Function to delete an element from stack */
+<br/>int pop ()
+<br/>{
+    <br/>  int num;
+      <br/>if (s.top == - 1)
+      <br/>{
+           <br/> printf ("Stack is Empty\n");
+            <br/>return (s.top);
+      <br/>}
+      <br/>else
+      <br/>{
+           <br/> num = s.stk[s.top];
+            <br/>printf ("poped element is = %d\n", s.stk[s.top]);
+            <br/>s.top = s.top - 1;
+      <br/>}
+      <br/>return(num);
+<br/>}
+<br/>/*Function to display the status of stack */
+<br/>void display ()
+<br/>{
+     <br/> int i;
+      <br/>if (s.top == -1)
+      <br/>{
+           <br/> printf ("Stack is empty\n");
+            <br/>return;
+      <br/>}
+      <br/>else
+      <br/>{
+           <br/> printf ("\nStatus of elements in stack : \n");
+            <br/>for (i = s.top; i >= 0; i--)
+            <br/>{
+                 <br/> printf ("%d\n", s.stk[i]);
+            <br/>}
+      <br/>} 
+<br/>}
+<br/>int main ()
+<br/>{
+     <br/> int ch;
+      <br/>s.top = -1;
+
+      <br/>printf ("\tSTACK OPERATIONS\n");
+      <br/>printf("----------------------------\n");
+      <br/>printf("      1. PUSH\n");
+      <br/>printf("      2. POP\n");
+      <br/>printf("      3. DISPLAY\n");
+      <br/>printf("      4. EXIT\n");
+      <br/>//printf("----------------------------\n");
+      <br/>while(1)
+      <br/>{
+           <br/> printf("\nChoose operation : ");
+            <br/>scanf("%d", &ch);
+            <br/>switch (ch)
+            <br/>{
+                 <br/> case 1:
+                      <br/>  push();
+                  <br/>break;
+                  <br/>case 2:
+                       <br/> pop();
+                  <br/>break;
+                  <br/>case 3:
+                       <br/> display();
+                  <br/>break;
+                  <br/>case 4:
+                       <br/> exit(0);
+                  <br/>default: 
+                       <br/> printf("Invalid operation \n");
+            <br/>}
+      <br/>}
+      <br/>return 0;
+<br/>}
+<br/>int main ()
+<br/>{
+     <br/> int ch;
+      <br/>s.top = -1;
+
+      <br/>printf ("\tSTACK OPERATIONS\n");
+      <br/>printf("----------------------------\n");
+      <br/>printf("      1. PUSH\n");
+      <br/>printf("      2. POP\n");
+      <br/>printf("      3. DISPLAY\n");
+      <br/>printf("      4. EXIT\n");
+      <br/>//printf("----------------------------\n");
+      <br/>while(1)
+      <br/>{
+           <br/> printf("\nChoose operation : ");
+            <br/>scanf("%d", &ch);
+            <br/>switch (ch)
+            <br/>{
+                 <br/> case 1:
+                      <br/>  push();
+                  <br/>break;
+                  <br/>case 2:
+                       <br/> pop();
+                  <br/>break;
+                  <br/>case 3:
+                       <br/> display();
+                  <br/>break;
+                  <br/>case 4:
+                       <br/> exit(0);
+                  <br/>default: 
+                       <br/> printf("Invalid operation \n");
+            <br/>}
+      <br/>}
+      <br/>return 0;
+<br/>}
+</p>
+</div>
+<div id="div3">
+<h1> Output:</h1></br>
+<img src="at10.png"/>
+</div>
+
+
+</body>
+</html>

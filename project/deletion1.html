@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="p.css"> 
+</head>
+<body>
+<h1> Delete an Array Elements</h1>
+<div id="div2">
+<p>
+*/
+
+#include <stdio.h></br>
+#define MAX_SIZE 100</br>
+</br>
+int main()</br>
+{
+ </br>   int arr[MAX_SIZE];
+    </br>int i, size, pos;
+
+    </br>/* Input size and element in array */
+    </br>printf("Enter size of the array : ");
+    </br>scanf("%d", &size);
+    </br>printf("Enter elements in array : ");
+    </br>for(i=0; i<size; i++)
+    </br>{
+        </br>scanf("%d", &arr[i]);
+    </br>}
+
+    </br>/* Input element position to delete */
+    </br>printf("Enter the element position to delete : ");
+    </br>scanf("%d", &pos);
+
+
+    </br>/* If delete position is invalid */
+    </br>if(pos==size+1 || pos<0)
+    </br>{
+        </br>printf("Invalid position! Please enter position between 1 to %d", size);
+    </br>}
+    </br>else
+    </br>{
+        </br>/* Copy next element value to current element */
+        </br>for(i=pos-1; i<size-1; i++)
+        </br>{
+            </br>arr[i] = arr[i + 1];
+        </br>}
+
+        </br>/* Decrement array size by 1 */
+        </br>size--;
+    </br>}
+
+    </br>/* Print array after deletion */
+    </br>printf("\nElements of array after delete are : ");
+    </br>for(i=0; i<size; i++)
+    </br>{
+        </br>printf("%d\t", arr[i]);
+    </br>}
+
+    </br>return 0;
+</br>}
+</p>
+</div>
+<div id="div3">
+<h1> Output:</h1></br>
+<img src="at2.png"/>
+</div>
+</body>
+</htm

@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="p.css"> 
+</head>
+<body>
+<h1> Insert Elements in Linked Lists</h1>
+<div id="div2">
+<h1>Source Code:</h1>
+<p>
+
+
+
+
+void addNodeAtPos(int data, int pos)<br/>
+{<br/>
+  Node* prev = new Node();<br/>
+  Node* curr = new Node();<br/>
+  Node* newNode = new Node();<br/>
+  newNode->data = data;<br/>
+
+  int tempPos = 0;   // Traverses through the list<br/>
+<br/>
+  curr = head;      // Initialize current to head;<br/>
+  if(head != NULL)<br/>
+  {<br/>
+    while(curr->next != NULL && tempPos != pos)<br/>
+    {<br/>
+        prev = curr;<br/>
+        curr = curr->next;<br/>
+        tempPos++;<br/>
+    }<br/>
+    if(pos==0)<br/>
+    {<br/>
+       cout << "Adding at Head! " << endl;<br/>
+       // Call function to addNode from head;<br/>
+    }<br/>
+    else if(curr->next == NULL && pos == tempPos+1)<br/>
+    {<br/>
+      cout << "Adding at Tail! " << endl;<br/>
+      // Call function to addNode at tail;<br/>
+    }<br/>
+    else if(pos > tempPos+1)<br/>
+      cout << " Position is out of bounds " << endl;<br/>
+     //Position not valid<br/>
+	 else<br/>
+    {<br/>
+        prev->next = newNode;<br/>
+        newNode->next = curr;<br/>
+        cout << "Node added at position: " << pos << endl;<br/>
+    }<br/>
+ }<br/>
+ else<br/>
+ {<br/>
+    head = newNode;<br/>
+    newNode->next=NULL;<br/>
+    cout << "Added at head as list is empty! " << endl;<br/>
+ }<br/>
+}<br/>
+</p>
+
+</div>
+<div id="div3">
+<h1> Output:</h1></br>
+<img src="insertll.jpg"/>
+</body>
+</html>

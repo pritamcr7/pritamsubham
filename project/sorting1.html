@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="p.css"> 
+</head>
+<body>
+<h1> Linnear Search</h1>
+<div id="div2">
+<p>
+include <stdio.h></br>
+</br>#define MAX_SIZE 100    // Maximum array size
+
+</br>int main()
+</br>{
+    </br>int arr[MAX_SIZE];
+    </br>int size;
+    </br>int i, j, temp;
+
+    /* Input size of array */
+    </br>printf("Enter size of array: ");
+    </br>scanf("%d", &size);
+
+    </br>/* Input elements in array */
+    printf("Enter elements in array: ");
+    </br>for(i=0; i<size; i++)
+    </br>{
+   </br>     scanf("%d", &arr[i]);
+    </br>}
+
+    </br>for(i=0; i<size; i++)
+    </br>{
+        </br>/* 
+         * Place currently selected element array[i]
+         * to its correct place.
+         */
+        </br>for(j=i+1; j<size; j++)
+        </br>{
+            </br>/* 
+             * Swap if currently selected array element
+             * is not at its correct position.
+             */
+           </br> if(arr[i] > arr[j])
+            </br>{
+                </br>temp     = arr[i];
+                </br>arr[i] = arr[j];
+                </br>arr[j] = temp;
+            </br>}
+        </br>}
+    </br>}
+
+    </br>/* Print the sorted array */
+    </br>printf("\nElements of array in ascending order: ");
+    </br>for(i=0; i<size; i++)
+    </br>{
+        </br>printf("%d\t", arr[i]);
+    </br>}
+
+    </br>return 0;
+</br>}
+</p>
+</div>
+<div id="div3">
+<h1> Output:</h1></br>
+<img src="at6.png"/>
+</div>
+</body>
+</html

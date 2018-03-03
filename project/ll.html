@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Topic-LINKED LIST</title>
+<link rel="Stylesheet" type="text/css" href="ll.css"/>
+<script type="text/javascript" src="javascript.js">
+</script>
+</head>
+<body>
+<div id="div1">
+<img src="logo1.jpg" height="80" width="80"/>
+<h1>Data Tuts</h1>
+<h4><a href="home.php" >Back to Home page</a></h4>
+</div>
+<div id="div2">
+<h2>Linked List</h2>
+<h3>Definition:</h3><hr style="margin-top:-20px"/>
+<p>Linked List is a linear data structure containing set of data elements termed as nodes.<br/>
+&nbsp &nbsp &nbsp
+Each node contains two parts.<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+1.<span style="color:5F29E7">info field</span>:This filed contains information or data<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+2.<span style="color:5F29E7">link field</span>:This field contain address of next node<br/>
+<br/>The link field of last node contains null('\0') value which indicate the end of link list.
+There is a pointer called start or head which contain addres of first node.
+</p>
+<br/>
+<img src="Capture1.png"/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<h3>Advantages:</h3><hr style="margin-top:-20px"/>
+<p>
+1.Linked lists are a dynamic data structure, which can grow and be pruned, allocating and deallocating memory while the program is running.<br/>
+2.Insertion and deletion node operations are easily implemented in a linked list.<br/>
+3.Dynamic data structures such as stacks and queues can be implemented using a linked list.<br/>
+4.There is no need to define an initial size for a linked list.<br/>
+5.Items can be added or removed from the middle of list.<br/>
+6.Backtracking is possible in two way linked list.<br/>
+</p>
+<h3>Disadvantages:</h3><hr style="margin-top:-20px"/>
+<p>
+1.They use more memory than arrays because of the storage used by their pointers.<br/>
+2.Nodes in a linked list must be read in order from the beginning as linked lists are inherently sequential access.<br/>
+3.Nodes are stored incontiguously, greatly increasing the time periods required to access individual elements within the list, especially with a CPU cache.<br/>
+4.Difficulties arise in linked lists when it comes to reverse traversing. For instance, singly linked lists are cumbersome to navigate backwards and while doubly linked lists are somewhat easier to read, memory is consumed in allocating space for a back-pointer.<br/>
+</p>
+<h3>How to create node:</h3><hr style="margin-top:-20px"/><p>
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; struct &nbsp  link<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   &nbsp int &nbsp info;</br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   &nbsp struct &nbsp *link;<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp };</p>
+<h3>Double Link List</h3><hr style="margin-top:-20px"/>
+<p>
+
+Double linked list is a data structure which contains 3 fields in each node.<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+1.<span style="color:5F29E7">info field</span>:This filed contains information or data<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+2.<span style="color:5F29E7">link field</span>:There is two pointer field,one field contain address of
+ previous node and the other field contain address of next node.<br/>
+</p><br/>
+<img src="Capture2.jpg"/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<h3>How to create double Linked node:</h3><hr style="margin-top:-20px"/><p>
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; struct &nbsp  link<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   &nbsp int &nbsp info;</br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   &nbsp struct &nbsp *next,*prev;<br/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp };</p><br/>
+<h4><a href="arraytuts.html">For  implementation click here</h4><br/><br/>
+</body>
+</html>

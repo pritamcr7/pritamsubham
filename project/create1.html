@@ -1,0 +1,47 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="p.css"> 
+</head>
+<body>
+<h1> Create & Display Array Elements</h1>
+<div id="div2">
+<p>
+#include <stdio.h><br/>
+#define MAX_SIZE 1000 // Maximum array size<br/><br/>
+
+int main()<br/>
+{
+    int arr[MAX_SIZE]; // Declare an array of MAX_SIZE<br/>
+    int i, N;<br/>
+
+    /* Input array size */<br/>
+    printf("Enter size of array: ");<br/>
+    scanf("%d", &N);<br/>
+
+    /* Input elements in array */<br/>
+    printf("Enter %d elements in the array : ", N);<br/>
+    for(i=0; i<N; i++)<br/>
+    {
+        scanf("%d", &arr[i]);<br/>
+    }
+
+
+    /*<br/>
+     * Print all elements of array<br/>
+     */<br/>
+    printf("\n Elements in array are: ");<br/>
+    for(i=0; i<N; i++)<br/>
+    {<br/>
+        printf("%d, ", arr[i]);<br/>
+    }<br/>
+
+    return 0;<br/>
+}<br/>
+</p>
+
+</div>
+<div id="div3">
+<h1> Output:</h1></br>
+<img src="at1.png"/>
+</body>
+</html>

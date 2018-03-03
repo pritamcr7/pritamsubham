@@ -1,0 +1,94 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="p.css"> 
+</head>
+<body>
+<h1> Delete Elements in Linked Lists</h1>
+<div id="div2">
+<h1>Source Code:</h1>
+<p>
+
+
+
+
+/ C program to find n'th node in linked list<br/>
+#include <stdio.h><br/>
+#include <stdlib.h><br/>
+#include <assert.h><br/>
+ 
+/* Link list node */<br/>
+struct Node<br/>
+{<br/>
+    int data;<br/>
+    struct Node* next;<br/>
+};<br/>
+ <br/>
+/* Given a reference (pointer to pointer) to the head<br/>
+    of a list and an int, push a new node on the front<br/>
+    of the list. */<br/>
+void push(struct Node** head_ref, int new_data)<br/>
+{<br/>
+    /* allocate node */<br/>
+    struct Node* new_node =
+            (struct Node*) malloc(sizeof(struct Node));<br/>
+ 
+    /* put in the data  */<br/>
+    new_node->data  = new_data;<br/>
+   <br/>
+    /* link the old list off the new node */<br/>
+    new_node->next = (*head_ref);<br/>
+   <br/>
+    /* move the head to point to the new node */<br/>
+    (*head_ref)    = new_node;<br/>
+}<br/>
+ <br/>
+/* Takes head pointer of the linked list and index<br/>
+    as arguments and return data at index*/<br/>
+int GetNth(struct Node* head, int index)<br/>
+{<br/>
+    struct Node* current = head;<br/>
+    int count = 0; /* the index of the node we're currently<br/>
+                  looking at */<br/>
+    while (current != NULL)<br/>
+    {<br/>
+       if (count == index)<br/>
+          return(current->data);<br/>
+       count++;<br/>
+       current = current->next;<br/>
+    }<br/>
+   
+    /* if we get to this line, the caller was asking<br/>
+       for a non-existent element so we assert fail */<br/>
+    assert(0);              <br/>
+}<br/>
+ <br/>
+/* Drier program to test above function*/<br/>
+int main()<br/>
+{<br/>
+    /* Start with the empty list */<br/>
+    struct Node* head = NULL;<br/>
+   <br/>
+    /* Use push() to construct below list<br/>
+     1->12->1->4->1  */<br/>
+    push(&head, 1);<br/>
+    push(&head, 4);<br/>
+    push(&head, 1);<br/>
+    push(&head, 12);<br/>
+    push(&head, 1);  <br/>
+   <br/>
+    /* Check the count function */<br/>
+    printf("Element at index 3 is %d", GetNth(head, 3));  <br/>
+    getchar();<br/>
+}<br/>
+
+ </p>
+
+</div>
+<div id="div3">
+<h1> Output:</h1></br>
+<img src="searchll.png"/>
+</body>
+</html>
+
+
+
